@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="demo"
+            type="com.example.mvvmwithdaggerhilt.demo.DemoModel2" />
+        <variable
+            name="greet"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".demo.ThirdActivity">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGreet"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{greet}"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtGreetPerson"
+            app:layout_constraintTop_toBottomOf="@+id/txtGreet"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(demo.age)}"/>
+
+        <Button
+            android:id="@+id/btnGreet"
+            app:layout_constraintTop_toBottomOf="@+id/txtGreetPerson"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Greet"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
