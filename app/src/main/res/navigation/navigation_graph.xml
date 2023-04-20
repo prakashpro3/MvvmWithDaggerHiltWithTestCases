@@ -28,6 +28,10 @@
         <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="www.test.com/reg/{id}" />
+
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
